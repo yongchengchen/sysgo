@@ -1,0 +1,5 @@
+config:
+  region: ${AWS_REGION}
+  id: ${AWS_DYNAMO_ACCESS_ID}
+  secret: ${AWS_DYNAMO_ACCESS_SECRET}
+  token: ""
