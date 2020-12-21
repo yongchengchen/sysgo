@@ -5,6 +5,6 @@ connections:
   mysql:
     driver: "mysql"
     dsn: "${DB_USERNAME}:${DB_PASSWORD}@tcp(${DB_HOST}:${DB_PORT})/${DB_DATABASE}?charset=utf8&parseTime=true"
-  inkstation_ecom:
+  ecom:
     driver: "mysql"
-    dsn: "${DB_USERNAME}:${DB_PASSWORD}@tcp(${DB_HOST}:${DB_PORT})/inkstation_ecom?charset=utf8&parseTime=true"
+    dsn: "${DB_USERNAME}:${DB_PASSWORD}@tcp(${DB_HOST}:${DB_PORT})/ecom?charset=utf8&parseTime=true"
