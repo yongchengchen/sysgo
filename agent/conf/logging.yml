@@ -1,0 +1,31 @@
+channels:
+  stack:
+    driver: stack
+    channels:
+      - daily
+      - slack
+  slack:
+    driver: slack
+    url: ${SLACK_WEBHOOK}
+    username: go-slack
+    emoji: ":boom:"
+    level: critical
+  zap:
+    level: ${LOG_LEVEL}
+    Development: true
+    DisableCaller: false
+    encoding: console
+    outputPaths: ["stdout", "./zap.log"]
+    errorOutputPaths: ["stderr"]
+    encoderConfig:
+      timeKey: ts
+      levelKey: level
+      messageKey: msg
+      nameKey: name
+      stacktraceKey: stacktrace
+      callerKey: caller
+      lineEnding: "\n\t"
+      timeEncoder: time
+      levelEncoder: lowercaseLevel
+      durationEncoder: stringDuration
+      callerEncoder: shortCaller

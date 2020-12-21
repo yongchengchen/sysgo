@@ -1,0 +1,7 @@
+version: "2.0"
+boot_services:
+  - user
+sysstat:
+  name: ${SYSSTAT_NODE_NAME_IP}  
+  diskpath: ${SYSSTAT_NODE_DISK_PATH}
+  dynotable: ${SYSSTAT_DYNAMODB_TABLENAME}
